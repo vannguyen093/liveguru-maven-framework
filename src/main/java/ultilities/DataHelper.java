@@ -12,18 +12,12 @@ public class DataHelper {
         return new DataHelper();
     }
 
-    public String getCustomerName() {
-        return faker.name().fullName().replace(".", "");
+    public String getFirstName() {
+        return faker.name().firstName();
     }
 
-    public String getAddress() {
-        return faker.address().streetAddress();
-    }
-    public String getCity() {
-        return faker.address().city();
-    }
-    public String getState() {
-        return faker.address().state();
+    public String getLastName() {
+        return faker.name().lastName();
     }
     public String getEmail() {
         return faker.internet().emailAddress();

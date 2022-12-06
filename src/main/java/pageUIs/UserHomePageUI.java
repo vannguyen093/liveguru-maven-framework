@@ -1,2 +1,4 @@
-package pageUIs;public class HomePageUI {
+package pageUIs;
+
+public class UserHomePageUI {
 }

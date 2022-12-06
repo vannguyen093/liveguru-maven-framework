@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.LoginPageObject;
 import pageObjects.PageGenerateManager;
 import pageUIs.BasePageUI;
 
@@ -521,71 +520,6 @@ public class BasePage {
         fullFileName = fullFileName.trim();
         getWebElement(driver, GlobalConstants.UPLOAD_FILE).sendKeys(fullFileName);
     }
-
-    //    @Step("Navigate to Dashboard Page")
-//    public void openPagesAtDashboardByPageName(WebDriver driver, String pageName) {
-//        waitForElementClickable(driver, BasePageLiveGuruUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
-//        clickToElement(driver, BasePageLiveGuruUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
-//    }
-//
-//    public pageObjects.nopCommerce.user.UserHomePageObject clickToLogoutLinkAtUser(WebDriver driver) {
-//        waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_LINK);
-//        clickToElement(driver, BasePageNopCommerceUI.LOGOUT_LINK);
-//        return PageGeneratorManager.getUserHomePage(driver);
-//    }
-//
-//    public AdminLoginPageObject clickToLogoutLinkAtAdmin(WebDriver driver) {
-//        waitForElementInvisible(driver, AdminBasePageUI.AJAX_BUSY);
-//        waitForElementClickable(driver, AdminBasePageUI.LOGOUT_LINK);
-//        clickToElement(driver, AdminBasePageUI.LOGOUT_LINK);
-//        return PageGeneratorManager.getAdminLoginPage(driver);
-//    }
-//
-//    @Step("Click to 'Log out' Link")
-//    public UserHomePageObject clickToLogOutLinkAtUserLiveGuru(WebDriver driver) {
-//        waitForElementClickable(driver, BasePageLiveGuruUI.ACCOUNT_BUTTON);
-//        clickToElement(driver, BasePageLiveGuruUI.ACCOUNT_BUTTON);
-//        waitForElementClickable(driver, BasePageLiveGuruUI.LOGOUT_BUTTON);
-//        clickToElement(driver, BasePageLiveGuruUI.LOGOUT_BUTTON);
-//        return pageObjects.liveGuru.user.PageGeneratorManager.getHomePage(driver);
-//    }
-//
     private long longTimeOut = GlobalConstants.LONG_TIMEOUT;
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
-
-    public LoginPageObject clickToLogoutLink(WebDriver driver, String menuText) {
-        waitForElementClickable(driver, BasePageUI.MENU_LINK_BY_MENU_TEXT, menuText);
-        clickToElement(driver, BasePageUI.MENU_LINK_BY_MENU_TEXT, menuText);
-        return PageGenerateManager.getLoginPage(driver);
-    }
-
-    public void clickToMenuLinkByMenuText(WebDriver driver, String menuText) {
-        waitForElementClickable(driver, BasePageUI.MENU_LINK_BY_MENU_TEXT, menuText);
-        clickToElement(driver, BasePageUI.MENU_LINK_BY_MENU_TEXT, menuText);
-    }
-
-    public void clickToSubmitButton(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.SUBMIT_BUTTON);
-        clickToElement(driver, BasePageUI.SUBMIT_BUTTON);
-    }
-
-    public String readCustomerIdFromTxtFile() {
-        String customerID = null;
-        try {
-            customerID = new String(Files.readAllBytes(Paths.get(GlobalConstants.PROJECT_PATH + "/src/test/resources/customerID.txt")));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return customerID;
-    }
-
-    public String readAccountIdFromTxtFile() {
-        String accountID = null;
-        try {
-            accountID = new String(Files.readAllBytes(Paths.get(GlobalConstants.PROJECT_PATH + "/src/test/resources/accountID.txt")));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return accountID;
-    }
 }

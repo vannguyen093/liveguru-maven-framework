@@ -28,12 +28,7 @@ public class LocalFactory {
                 System.setProperty("webdriver.gecko.driver", GlobalConstants.PROJECT_PATH + "\\browserDrivers\\geckodriver.exe");
                 System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "\\browserLogs\\FirefoxLog.log");
-                FirefoxProfile profile = new FirefoxProfile();
-                File adBlock = new File(GlobalConstants.PROJECT_PATH + "\\browserExtension\\adblock_for_firefox-5.3.2.xpi");
-                profile.addExtension(adBlock);
-                FirefoxOptions options = new FirefoxOptions();
-                options.setProfile(profile);
-                driver = new FirefoxDriver(options);
+                driver = new FirefoxDriver();
                 break;
             case H_FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
@@ -46,10 +41,7 @@ public class LocalFactory {
                 WebDriverManager.chromedriver().setup();
                 System.setProperty("webdriver.chrome.args", "--disable-logging");
                 System.setProperty("webdriver.chrome.silentOutput", "true");
-                File file = new File(GlobalConstants.PROJECT_PATH + "\\browserExtension\\adblock_chrome.crx");
-                ChromeOptions cOptions = new ChromeOptions();
-                cOptions.addExtensions(file);
-                driver = new ChromeDriver(cOptions);
+                driver = new ChromeDriver();
                 break;
             case H_CHROME:
                 WebDriverManager.chromedriver().setup();

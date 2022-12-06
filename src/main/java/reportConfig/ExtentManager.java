@@ -10,15 +10,15 @@ public class ExtentManager {
 
     public synchronized static ExtentReports createExtentReports() {
         ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstants.PROJECT_PATH + "/extentV5/ExtentReport.html");
-        reporter.config().setReportName("BankGuru HTML Report");
-        reporter.config().setDocumentTitle("BankGuru HTML Report");
+        reporter.config().setReportName("LiveGuru HTML Report");
+        reporter.config().setDocumentTitle("LiveGuru HTML Report");
         reporter.config().setTimelineEnabled(true);
         reporter.config().setEncoding("utf-8");
         reporter.config().setTheme(Theme.DARK);
 
         extentReports.attachReporter(reporter);
         extentReports.setSystemInfo("Company", "Automation FC");
-        extentReports.setSystemInfo("Project", "BankGuru");
+        extentReports.setSystemInfo("Project", "LiveGuru");
         extentReports.setSystemInfo("Team", "VanNL");
         extentReports.setSystemInfo("JDK version", GlobalConstants.JAVA_VERSION);
         return extentReports;

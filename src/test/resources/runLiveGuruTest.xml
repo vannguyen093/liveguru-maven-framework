@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="BankGuru">
+<suite name="LiveGuru">
 
     <parameter name="evnName" value="local" />
 
@@ -14,12 +14,12 @@
 
     <test name="Run on Firefox">
         <parameter name="browser" value="Firefox"/>
-        <packages>
-            <package name="com.bankguru.payment" />
-        </packages>
-<!--        <classes>-->
-<!--            <class name="com.bankguru.payment.Payment_02_Create_Edit_Account"/>-->
-<!--        </classes>-->
+<!--        <packages>-->
+<!--            <package name="com.user" />-->
+<!--        </packages>-->
+        <classes>
+            <class name="com.user.User_01_Register_Login"/>
+        </classes>
     </test>
 
 </suite>
