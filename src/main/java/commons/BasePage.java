@@ -7,12 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.PageGenerateManager;
 import pageUIs.BasePageUI;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -522,4 +518,30 @@ public class BasePage {
     }
     private long longTimeOut = GlobalConstants.LONG_TIMEOUT;
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
+
+    public void clickToMyAccountLink(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.MY_ACOUNT_LINK);
+        clickToElement(driver, BasePageUI.MY_ACOUNT_LINK);
+    }
+
+    public void clickToHeaderAccountLink(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.HEADER_ACOUNT_LINK);
+        clickToElement(driver, BasePageUI.HEADER_ACOUNT_LINK);
+    }
+
+    public void clickToLogoutLink(WebDriver driver) {
+        clickToHeaderAccountLink(driver);
+        waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
+        clickToElement(driver, BasePageUI.LOGOUT_LINK);
+    }
+
+    public void clickToSidebarMenuLinkByMenuText(WebDriver driver, String sidebarMenuText) {
+        waitForElementClickable(driver, BasePageUI.SIDEBAR_MENU_LINK_BY_MENU_TEXT, sidebarMenuText);
+        clickToElement(driver, BasePageUI.SIDEBAR_MENU_LINK_BY_MENU_TEXT, sidebarMenuText);
+    }
+
+    public void clickToHeaderMenuLinkByMenuText(WebDriver driver, String headerMenuText) {
+        waitForElementClickable(driver, BasePageUI.HEADER_MENU_LINK_BY_MENU_TEXT, headerMenuText);
+        clickToElement(driver, BasePageUI.HEADER_MENU_LINK_BY_MENU_TEXT, headerMenuText);
+    }
 }

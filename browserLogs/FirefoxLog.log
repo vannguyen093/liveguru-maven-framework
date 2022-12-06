@@ -1,0 +1,17 @@
+1670332974915	geckodriver	INFO	Listening on 127.0.0.1:2198
+1670332975968	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofilerWqLxq"
+1670332976711	Marionette	INFO	Marionette enabled
+1670332976718	Marionette	INFO	Listening on port 61088
+Read port: 61088
+1670332976822	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofilerWqLxq\\search.json.mozlz4", (void 0)))
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: http://live.techpanda.org/js/varien/product.js, line 485: unreachable code after return statement
+JavaScript warning: http://live.techpanda.org/js/varien/configurable.js, line 291: unreachable code after return statement
+JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 7040 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 5862 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 3350 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
+1670332993965	Marionette	INFO	Stopped listening on port 61088
