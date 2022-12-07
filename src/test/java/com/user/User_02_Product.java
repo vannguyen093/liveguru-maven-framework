@@ -2,7 +2,6 @@ package com.user;
 
 import com.aventstack.extentreports.Status;
 import commons.BaseTest;
-import commons.GlobalConstants;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
@@ -106,16 +105,16 @@ public class User_02_Product extends BaseTest {
         userCartPage.inputToQuantityTextBox("501");
 
         ExtentTestManager.getTest().log(Status.INFO, "Verify Discount Coupon - Step 04: Click to 'Update' button");
-        userCartPage.clickToUpdateButton();
+        userCartPage.clickToButtonByButtonTitle("Update");
 
         ExtentTestManager.getTest().log(Status.INFO, "Verify Discount Coupon - Step 05: Verify the error message is displayed");
         verifyEquals(userCartPage.getCartMessage(),"Some of the products cannot be ordered in requested quantity.");
 
         ExtentTestManager.getTest().log(Status.INFO, "Verify Discount Coupon - Step 06: Verify the error message of product's quantity is displayed");
-        verifyEquals(userCartPage.getProductQTYErrMessage(),"* The maximum quantity allowed for purchase is 500.");
+        verifyEquals(userCartPage.getProductQtyErrMessage(),"* The maximum quantity allowed for purchase is 500.");
 
         ExtentTestManager.getTest().log(Status.INFO, "Verify Discount Coupon - Step 07: Click to 'Empty Cart' button");
-        userCartPage.clickToEmptyCartButton();
+        userCartPage.clickToButtonByButtonTitle("Empty Cart");
 
         ExtentTestManager.getTest().log(Status.INFO, "Verify Discount Coupon - Step 08: Verify empty cart header is displayed");
         verifyTrue(userCartPage.isEmptyCartHeaderDisplayed());

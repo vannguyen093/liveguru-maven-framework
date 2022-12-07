@@ -30,9 +30,6 @@ public class DataHelper {
     public String getCity() {
         return faker.address().city();
     }
-    public String getZip() {
-        return faker.address().zipCode();
-    }
     public String getTelephone() {
         return faker.phoneNumber().cellPhone();
     }

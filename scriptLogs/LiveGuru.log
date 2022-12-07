@@ -263,3 +263,63 @@ Session ID: 0dd42022-dee6-41cf-80c5-455970be76af
 [2022-12-07 15:27:56,187]  -------------------------- PASSED -------------------------- 
 [2022-12-07 15:27:56,428] OS name = windows 10
 [2022-12-07 15:27:56,429] Driver instance name = firefoxdriver: firefox on windows (9fe86309-53e7-4aec-848c-d6e9943df3e0)
+[2022-12-07 20:35:24,327] OS name = windows 11
+[2022-12-07 20:35:24,331] Driver instance name = firefoxdriver: firefox on windows (899cc67e-cd97-46d8-940c-02573b462ec4)
+[2022-12-07 20:37:40,186] OS name = windows 11
+[2022-12-07 20:37:40,187] Driver instance name = firefoxdriver: firefox on windows (946ff6b3-0a0c-4c56-8e2c-2511f1028f53)
+[2022-12-07 20:40:15,574] OS name = windows 11
+[2022-12-07 20:40:15,575] Driver instance name = firefoxdriver: firefox on windows (66ce98a0-4e3a-4d2c-8744-c88da31270e3)
+[2022-12-07 20:41:35,013]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:41:36,546]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:41:36,611]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:42:08,919] OS name = windows 11
+[2022-12-07 20:42:08,920] Driver instance name = firefoxdriver: firefox on windows (6e6349e6-d9bd-4208-8bca-d44397c3bd9b)
+[2022-12-07 20:45:41,976]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:45:43,600]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:45:43,662]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:46:15,806] OS name = windows 11
+[2022-12-07 20:46:15,807] Driver instance name = firefoxdriver: firefox on windows (afbd1f11-b6dc-4905-88a7-bd2e4ff05719)
+[2022-12-07 20:46:50,923]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:46:52,433]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:46:52,496]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:47:26,893] OS name = windows 11
+[2022-12-07 20:47:26,894] Driver instance name = firefoxdriver: firefox on windows (d27cd456-35fb-47e3-aa21-698be86d8642)
+[2022-12-07 20:48:12,341]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:48:13,887]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:48:13,947]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:48:48,239] OS name = windows 11
+[2022-12-07 20:48:48,239] Driver instance name = firefoxdriver: firefox on windows (8984c628-b145-4ebf-86d5-18ee772951b8)
+[2022-12-07 20:49:43,246] OS name = windows 11
+[2022-12-07 20:49:43,247] Driver instance name = firefoxdriver: firefox on windows (aa5a7c52-740e-46e7-85a4-4cd7c9d7b9de)
+[2022-12-07 20:49:43,252] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-9JOSJVK', ip: '192.168.164.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9700, moz:profile: C:\Users\Van Nguyen\AppData..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: aa5a7c52-740e-46e7-85a4-4cd7c9d7b9de
+[2022-12-07 20:50:09,796]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:50:11,355]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:50:11,418]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:50:45,387] OS name = windows 11
+[2022-12-07 20:50:45,387] Driver instance name = firefoxdriver: firefox on windows (d6d2938b-4157-4055-867c-036faaef4bed)
+[2022-12-07 20:51:51,130]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:51:52,662]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:51:52,716]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:52:27,177] OS name = windows 11
+[2022-12-07 20:52:27,178] Driver instance name = firefoxdriver: firefox on windows (2f48d96e-f4d1-44f8-a248-07606b83816d)
+[2022-12-07 20:56:47,512]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:56:49,075]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:56:49,136]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:57:23,639] OS name = windows 11
+[2022-12-07 20:57:23,639] Driver instance name = firefoxdriver: firefox on windows (005b93cb-c5e9-4589-83af-20f23bec9108)
+[2022-12-07 20:59:45,670]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:59:48,107]  -------------------------- PASSED -------------------------- 
+[2022-12-07 20:59:48,200]  -------------------------- PASSED -------------------------- 
+[2022-12-07 21:00:23,257] OS name = windows 11
+[2022-12-07 21:00:23,258] Driver instance name = firefoxdriver: firefox on windows (b150150d-8142-4ed4-aed4-959f07a682c9)
+[2022-12-07 21:03:09,875]  -------------------------- PASSED -------------------------- 
+[2022-12-07 21:03:11,439]  -------------------------- PASSED -------------------------- 
+[2022-12-07 21:03:11,500]  -------------------------- PASSED -------------------------- 
+[2022-12-07 21:03:17,505]  -------------------------- PASSED -------------------------- 
+[2022-12-07 21:03:17,644] OS name = windows 11
+[2022-12-07 21:03:17,645] Driver instance name = firefoxdriver: firefox on windows (3359a29e-f9c5-4a5d-be68-e9dce00f6d25)

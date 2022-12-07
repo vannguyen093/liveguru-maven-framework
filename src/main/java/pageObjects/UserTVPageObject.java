@@ -22,4 +22,10 @@ public class UserTVPageObject extends BasePage {
         clickToElement(driver, UserTVPageUI.PRODUCT_NAME_TITLE, productName);
         return PageGenerateManager.getUserProductDetailPage(driver);
     }
+
+    public UserCartPageObject clickToAddToCartButtonByProductName(String productName) {
+        waitForElementClickable(driver, UserTVPageUI.ADD_TO_CART_LINK_BY_PRODUCT_NAME, productName);
+        clickToElement(driver, UserTVPageUI.ADD_TO_CART_LINK_BY_PRODUCT_NAME, productName);
+        return PageGenerateManager.getUserCartPage(driver);
+    }
 }

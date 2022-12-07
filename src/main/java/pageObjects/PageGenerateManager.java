@@ -40,6 +40,12 @@ public class PageGenerateManager {
     public static UserReviewPageObject getUserReviewPage(WebDriver driver){
         return new UserReviewPageObject(driver);
     }
+    public static UserCheckOutPageObject getUserCheckOutPage(WebDriver driver){
+        return new UserCheckOutPageObject(driver);
+    }
+    public static UserSuccessCheckOutPageObject getUserSuccessCheckOutPage(WebDriver driver){
+        return new UserSuccessCheckOutPageObject(driver);
+    }
     public static AdminLoginPageObject getAdminLoginPage(WebDriver driver){
         return new AdminLoginPageObject(driver);
     }

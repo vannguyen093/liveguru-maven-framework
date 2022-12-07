@@ -46,19 +46,14 @@ public class UserCartPageObject extends BasePage {
         sendkeysToElement(driver, UserCartPageUI.QUANTITY_TEXTBOX, value);
     }
 
-    public void clickToUpdateButton() {
-        waitForElementClickable(driver, UserCartPageUI.UPDATE_BUTTON);
-        clickToElement(driver, UserCartPageUI.UPDATE_BUTTON);
+    public void clickToButtonByButtonTitle(String buttonTitle) {
+        waitForElementClickable(driver, UserCartPageUI.BUTTON_BY_TITLE_TEXT, buttonTitle);
+        clickToElement(driver, UserCartPageUI.BUTTON_BY_TITLE_TEXT, buttonTitle);
     }
 
-    public String getProductQTYErrMessage() {
+    public String getProductQtyErrMessage() {
         waitForElementVisible(driver, UserCartPageUI.PRODUCT_QUANTITY_ERR_MESSAGE_TEXT);
         return getElementText(driver, UserCartPageUI.PRODUCT_QUANTITY_ERR_MESSAGE_TEXT);
-    }
-
-    public void clickToEmptyCartButton() {
-        waitForElementClickable(driver, UserCartPageUI.EMPTY_CART_BUTTON);
-        clickToElement(driver, UserCartPageUI.EMPTY_CART_BUTTON);
     }
 
     public boolean isEmptyCartHeaderDisplayed() {
@@ -69,5 +64,30 @@ public class UserCartPageObject extends BasePage {
     public boolean isNoItemMessageDisplayed() {
         waitForElementVisible(driver, UserCartPageUI.NO_ITEM_IN_CART_TEXT);
         return isElementDisplayed(driver, UserCartPageUI.NO_ITEM_IN_CART_TEXT);
+    }
+
+    public void selectItemAtEstimateDropdownByDropdownID(String dropdownText, String value) {
+        waitForElementClickable(driver, UserCartPageUI.ESTIMATE_SHIPPING_RADIO_BY_RADIO_ID, dropdownText);
+        selectItemInDefaultDropdown(driver, UserCartPageUI.ESTIMATE_SHIPPING_RADIO_BY_RADIO_ID, value, dropdownText);
+    }
+
+    public void inputToZipTextBox(String value) {
+        waitForElementVisible(driver, UserCartPageUI.ZIP_TEXTBOX);
+        sendkeysToElement(driver, UserCartPageUI.ZIP_TEXTBOX, value);
+    }
+
+    public String getFixedFlatRateText() {
+        waitForElementVisible(driver, UserCartPageUI.FIXED_FLAT_RATE_TEXT);
+        return getElementText(driver, UserCartPageUI.FIXED_FLAT_RATE_TEXT);
+    }
+
+    public Object getShippingHandlingText() {
+        waitForElementVisible(driver, UserCartPageUI.SHIPPING_HANDLING_PRICE_TEXT);
+        return getElementText(driver, UserCartPageUI.SHIPPING_HANDLING_PRICE_TEXT);
+    }
+
+    public void checkToFixedRadio() {
+        waitForElementClickable(driver,UserCartPageUI.FIXED_FLAT_RATE_TEXT);
+        checkToDefaultCheckboxRadio(driver, UserCartPageUI.FIXED_FLAT_RATE_TEXT);
     }
 }
