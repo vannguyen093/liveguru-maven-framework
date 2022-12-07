@@ -28,6 +28,9 @@ public class PageGenerateManager {
     public static UserCartPageObject getUserCartPage(WebDriver driver){
         return new UserCartPageObject(driver);
     }
+    public static UserCompareWindowPageObject getUserCompareWindowPage(WebDriver driver){
+        return new UserCompareWindowPageObject(driver);
+    }
     public static AdminLoginPageObject getAdminLoginPage(WebDriver driver){
         return new AdminLoginPageObject(driver);
     }

@@ -12,9 +12,9 @@ public class UserCartPageObject extends BasePage {
         this.driver = driver;
     }
 
-    public boolean isSuccessfullyAddedMessageDisplayed() {
-        waitForElementVisible(driver, UserCartPageUI.PRODUCT_ADDED_SUCCESSFUL_MESSAGE_TEXT);
-        return isElementDisplayed(driver, UserCartPageUI.PRODUCT_ADDED_SUCCESSFUL_MESSAGE_TEXT);
+    public String getCartMessage() {
+        waitForElementVisible(driver, UserCartPageUI.CART_MESSAGE_TEXT);
+        return getElementText(driver, UserCartPageUI.CART_MESSAGE_TEXT);
     }
 
     public void inputToDiscountCodeTextBox(String couponText) {
@@ -36,5 +36,38 @@ public class UserCartPageObject extends BasePage {
     public void clickToRemoveItemIcon() {
         waitForElementClickable(driver, UserCartPageUI.REMOVE_ITEM_ICON);
         clickToElement(driver, UserCartPageUI.REMOVE_ITEM_ICON);
+    }
+
+    public void inputToQuantityTextBox(String value) {
+        waitForElementClickable(driver, UserCartPageUI.QUANTITY_TEXTBOX);
+        clickToElement(driver, UserCartPageUI.QUANTITY_TEXTBOX);
+
+        waitForElementVisible(driver, UserCartPageUI.QUANTITY_TEXTBOX);
+        sendkeysToElement(driver, UserCartPageUI.QUANTITY_TEXTBOX, value);
+    }
+
+    public void clickToUpdateButton() {
+        waitForElementClickable(driver, UserCartPageUI.UPDATE_BUTTON);
+        clickToElement(driver, UserCartPageUI.UPDATE_BUTTON);
+    }
+
+    public String getProductQTYErrMessage() {
+        waitForElementVisible(driver, UserCartPageUI.PRODUCT_QUANTITY_ERR_MESSAGE_TEXT);
+        return getElementText(driver, UserCartPageUI.PRODUCT_QUANTITY_ERR_MESSAGE_TEXT);
+    }
+
+    public void clickToEmptyCartButton() {
+        waitForElementClickable(driver, UserCartPageUI.EMPTY_CART_BUTTON);
+        clickToElement(driver, UserCartPageUI.EMPTY_CART_BUTTON);
+    }
+
+    public boolean isEmptyCartHeaderDisplayed() {
+        waitForElementVisible(driver, UserCartPageUI.EMPTY_CART_HEADER_TEXT);
+        return isElementDisplayed(driver, UserCartPageUI.EMPTY_CART_HEADER_TEXT);
+    }
+
+    public boolean isNoItemMessageDisplayed() {
+        waitForElementVisible(driver, UserCartPageUI.NO_ITEM_IN_CART_TEXT);
+        return isElementDisplayed(driver, UserCartPageUI.NO_ITEM_IN_CART_TEXT);
     }
 }

@@ -27,4 +27,22 @@ public class UserMobilePageObject extends BasePage {
         clickToElement(driver, UserMobilePageUI.ADD_TO_CART_BUTTON_BY_PRODUCT_NAME, productName);
         return PageGenerateManager.getUserCartPage(driver);
     }
+
+    public void clickToAddToCompareLinkByProdName(String productName) {
+        waitForElementClickable(driver, UserMobilePageUI.ADD_TO_COMPARE_LINK_BY_PRODUCT_NAME, productName);
+        clickToElement(driver, UserMobilePageUI.ADD_TO_COMPARE_LINK_BY_PRODUCT_NAME, productName);
+    }
+
+    public String getProductAddedCompareMessage() {
+        waitForElementVisible(driver, UserMobilePageUI.PRODUCT_ADDED_COMPARE_MESSAGE_TEXT);
+        return getElementText(driver, UserMobilePageUI.PRODUCT_ADDED_COMPARE_MESSAGE_TEXT);
+    }
+
+    public UserCompareWindowPageObject clickToCompareButton() {
+        waitForElementClickable(driver, UserMobilePageUI.COMPARE_BUTTON);
+        clickToElement(driver, UserMobilePageUI.COMPARE_BUTTON);
+
+        switchToWindowByTitle(driver, getPageTitle(driver));
+        return PageGenerateManager.getUserCompareWindowPage(driver);
+    }
 }
