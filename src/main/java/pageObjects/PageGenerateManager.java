@@ -31,6 +31,15 @@ public class PageGenerateManager {
     public static UserCompareWindowPageObject getUserCompareWindowPage(WebDriver driver){
         return new UserCompareWindowPageObject(driver);
     }
+    public static UserTVPageObject getUserTVPage(WebDriver driver){
+        return new UserTVPageObject(driver);
+    }
+    public static UserWishlistPageObject getUserWishlistPage(WebDriver driver){
+        return new UserWishlistPageObject(driver);
+    }
+    public static UserReviewPageObject getUserReviewPage(WebDriver driver){
+        return new UserReviewPageObject(driver);
+    }
     public static AdminLoginPageObject getAdminLoginPage(WebDriver driver){
         return new AdminLoginPageObject(driver);
     }

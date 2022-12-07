@@ -533,10 +533,10 @@ public class BasePage {
         clickToElement(driver, BasePageUI.HEADER_ACOUNT_LINK);
     }
 
-    public void clickToLogoutLink(WebDriver driver) {
+    public void clickToAccountMenuLinkByMenuText(WebDriver driver, String accountMenuText) {
         clickToHeaderAccountLink(driver);
-        waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
-        clickToElement(driver, BasePageUI.LOGOUT_LINK);
+        waitForElementClickable(driver, BasePageUI.ACCOUNT_MENU_LINK_BY_MENU_TEXT, accountMenuText);
+        clickToElement(driver, BasePageUI.ACCOUNT_MENU_LINK_BY_MENU_TEXT, accountMenuText);
     }
 
     public void clickToSidebarMenuLinkByMenuText(WebDriver driver, String sidebarMenuText) {

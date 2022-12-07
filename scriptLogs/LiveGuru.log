@@ -218,3 +218,48 @@ Session ID: e34bfa13-333e-454d-bf46-852222945edb
 [2022-12-07 11:20:38,401]  -------------------------- PASSED -------------------------- 
 [2022-12-07 11:20:38,483] OS name = windows 10
 [2022-12-07 11:20:38,483] Driver instance name = firefoxdriver: firefox on windows (490f79f2-88ca-4804-b867-26f7a8ed0d19)
+[2022-12-07 14:21:46,859] OS name = windows 10
+[2022-12-07 14:21:46,861] Driver instance name = firefoxdriver: firefox on windows (84e0d9bb-349e-4fde-9fd4-a32d26caf6ca)
+[2022-12-07 14:21:46,865] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-U5D1GF0', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10628, moz:profile: C:\Users\Hong Trang\AppData..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 84e0d9bb-349e-4fde-9fd4-a32d26caf6ca
+[2022-12-07 14:23:50,734]  -------------------------- PASSED -------------------------- 
+[2022-12-07 14:23:50,817]  -------------------------- PASSED -------------------------- 
+[2022-12-07 14:23:50,941] OS name = windows 10
+[2022-12-07 14:23:50,942] Driver instance name = firefoxdriver: firefox on windows (67003c4e-40bf-46d7-8052-533134b4d34a)
+[2022-12-07 15:11:16,743] OS name = windows 10
+[2022-12-07 15:11:16,755] Driver instance name = firefoxdriver: firefox on windows (d4b76cab-6c8f-4bcb-aff3-f977e8c753e8)
+[2022-12-07 15:14:51,480] OS name = windows 10
+[2022-12-07 15:14:51,490] Driver instance name = firefoxdriver: firefox on windows (e4134563-b5a5-4f9a-8ccf-790ad5e07c0a)
+[2022-12-07 15:18:19,509]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:18:19,686]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:18:38,155] OS name = windows 10
+[2022-12-07 15:18:38,156] Driver instance name = firefoxdriver: firefox on windows (d1872973-834a-4871-b126-498c43dd20a6)
+[2022-12-07 15:18:38,166] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-U5D1GF0', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1392, moz:profile: C:\Users\Hong Trang\AppData..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d1872973-834a-4871-b126-498c43dd20a6
+[2022-12-07 15:19:47,263] OS name = windows 10
+[2022-12-07 15:19:47,264] Driver instance name = firefoxdriver: firefox on windows (0dd42022-dee6-41cf-80c5-455970be76af)
+[2022-12-07 15:19:47,275] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-U5D1GF0', ip: '172.19.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15840, moz:profile: C:\Users\Hong Trang\AppData..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0dd42022-dee6-41cf-80c5-455970be76af
+[2022-12-07 15:25:43,848]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:25:44,023]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:25:44,097]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:26:14,598] OS name = windows 10
+[2022-12-07 15:26:14,598] Driver instance name = firefoxdriver: firefox on windows (314868b4-2024-4ba8-9be2-cc511ad72513)
+[2022-12-07 15:27:53,777]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:27:53,878]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:27:53,968]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:27:56,187]  -------------------------- PASSED -------------------------- 
+[2022-12-07 15:27:56,428] OS name = windows 10
+[2022-12-07 15:27:56,429] Driver instance name = firefoxdriver: firefox on windows (9fe86309-53e7-4aec-848c-d6e9943df3e0)

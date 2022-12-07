@@ -15,7 +15,6 @@ public class DataHelper {
     public String getFirstName() {
         return faker.name().firstName();
     }
-
     public String getLastName() {
         return faker.name().lastName();
     }
@@ -24,5 +23,17 @@ public class DataHelper {
     }
     public String getPassword() {
         return faker.internet().password();
+    }
+    public String getAddress() {
+        return faker.address().fullAddress();
+    }
+    public String getCity() {
+        return faker.address().city();
+    }
+    public String getZip() {
+        return faker.address().zipCode();
+    }
+    public String getTelephone() {
+        return faker.phoneNumber().cellPhone();
     }
 }

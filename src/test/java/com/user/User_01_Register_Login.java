@@ -87,7 +87,7 @@ public class User_01_Register_Login extends BaseTest {
         verifyEquals(userAccountInfoPage.getTextboxValueByID("email"), emailAddress);
 
         ExtentTestManager.getTest().log(Status.INFO, "Verify User Info - Step 05: Click to 'Log out' link");
-        userAccountInfoPage.clickToLogoutLink(driver);
+        userAccountInfoPage.clickToAccountMenuLinkByMenuText(driver, "Log Out");
         userHomePage = PageGenerateManager.getUserHomePage(driver);
     }
 

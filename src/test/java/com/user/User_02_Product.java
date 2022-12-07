@@ -172,11 +172,16 @@ public class User_02_Product extends BaseTest {
 
         ExtentTestManager.getTest().log(Status.INFO, "Add To Wishlist - Step 01: Click to 'TV' link");
         userMobilePage.clickToHeaderMenuLinkByMenuText(driver, "TV");
-        userMobilePage = PageGenerateManager.getUserMobilePage(driver);
+        userTVPage = PageGenerateManager.getUserTVPage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Add To Wishlist - Step 02: Click to 'Add to Wishlist' link at product named 'LG LCD'");
+        userWishlistPage = userTVPage.clickToAddToWishlistByProductName("LG LCD");
+
         ExtentTestManager.getTest().log(Status.INFO, "Add To Wishlist - Step 03: Verify successfully added to wishlist message is displayed");
+        verifyTrue(userWishlistPage.isSuccessfullyAddedToWishlistDisplayed());
+
         ExtentTestManager.getTest().log(Status.INFO, "Add To Wishlist - Step 04: Verify in Wishlist page have only 1 item");
+        verifyEquals(userWishlistPage.getWishlistTableSize(), 1);
     }
 
     @AfterClass(alwaysRun = true)
@@ -197,4 +202,6 @@ public class User_02_Product extends BaseTest {
     UserLoginPageObject userLoginPage;
     UserRegisterPageObject userRegisterPage;
     UserMyDashboardPageObject userMyDashboardPage;
+    UserTVPageObject userTVPage;
+    UserWishlistPageObject userWishlistPage;
 }
