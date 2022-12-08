@@ -1,20 +1,19 @@
-1670421773081	geckodriver	INFO	Listening on 127.0.0.1:54914
-1670421773878	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofilev1sknY"
-1670421774190	Marionette	INFO	Marionette enabled
-1670421774196	Marionette	INFO	Listening on port 54551
-Read port: 54551
-1670421774294	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofilev1sknY\\search.json.mozlz4", (void 0)))
-JavaScript error: , line 0: uncaught exception: undefined
+1670458295000	geckodriver	INFO	Listening on 127.0.0.1:13905
+1670458295912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofileU915Oi"
+1670458296364	Marionette	INFO	Marionette enabled
+1670458296370	Marionette	INFO	Listening on port 51770
+Read port: 51770
+1670458296751	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofileU915Oi\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 6687 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
-JavaScript error: , line 0: uncaught exception: undefined
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 4256 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 7757 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 6457 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 677 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 428 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 4758 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 7440 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 7795 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/T3BTWj-SqXOOtsP36vZJ1esojObpW8ivZm_viBadolo.js line 2 > eval line 4592 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-1670421797665	Marionette	INFO	Stopped listening on port 54551
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 2083 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 7787 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 780 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 3352 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 1978 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1670458322791	Marionette	INFO	Stopped listening on port 51770

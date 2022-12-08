@@ -27,13 +27,12 @@ public class GridFactory {
         this.portNumber = portNumber;
     }
 
-    public WebDriver createDriver(){
+    public WebDriver createDriver() {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         DesiredCapabilities capability = null;
         switch (browserList) {
             case FIREFOX:
-                //                WebDriverManager.firefoxdriver().setup();
-                System.setProperty("webdriver.gecko.driver", GlobalConstants.PROJECT_PATH + "\\browserDrivers\\geckodriver.exe");
+                WebDriverManager.firefoxdriver().setup();
                 capability = DesiredCapabilities.firefox();
                 capability.setBrowserName("firefox");
                 capability.setPlatform(Platform.WINDOWS);

@@ -92,12 +92,12 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         verifyTrue(userReviewPage.isSuccessfullReviewMessageDisplayed());
     }
 
-//    @Test
+    @Test
     public void TC_11_Purchase_Product(Method method) {
         ExtentTestManager.startTest(method.getName(), "Purchase Product");
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 01: Click to 'TV' link");
-        userReviewPage.clickToHeaderMenuLinkByMenuText(driver, "TV");
+        userMyDashboardPage.clickToHeaderMenuLinkByMenuText(driver, "TV");
         userTVPage = PageGenerateManager.getUserTVPage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 02: Click to 'Add to cart' button at product named 'Samsung LCD'");
@@ -118,54 +118,54 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 07: Verify 'Flat Rate' is displayed with value 'Fixed - $5.00'");
         verifyEquals(userCartPage.getFixedFlatRateText(),"$5.00");
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 07: Select' Fixed cost' radio at 'Flat Rate' field");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 08: Select' Fixed cost' radio at 'Flat Rate' field");
         userCartPage.checkToFixedRadio();
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 08: Click to 'Update Total' button");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 09: Click to 'Update Total' button");
         userCartPage.clickToButtonByButtonTitle("Update Total");
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 09: Verify 'Shipping & Handling' is displayed");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 10: Verify 'Shipping & Handling' is displayed");
         verifyEquals(userCartPage.getShippingHandlingText(),"$5.00");
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 10: Verify shipping cost is added to total with value '$705'");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 11: Verify shipping cost is added to total with value '$705'");
         verifyEquals(userCartPage.getGrandTotalText(),"$705.00");
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 11: Click to 'Proceed To Checkout' button");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 12: Click to 'Proceed To Checkout' button");
         userCartPage.clickToButtonByButtonTitle("Proceed to Checkout");
         userCheckOutPage = PageGenerateManager.getUserCheckOutPage(driver);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 12: Input to 'Address' text box with value '" + address + "'");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 13: Input to 'Address' text box with value '" + address + "'");
         userCheckOutPage.inputToTextboxByTitle("Street Address", address);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 13: Input to 'City' text box with value '" + city + "'");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 14: Input to 'City' text box with value '" + city + "'");
         userCheckOutPage.inputToTextboxByTitle("City", city);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 14: Select value at 'State/Province' dropdown with value '" + state + "'");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 15: Select value at 'State/Province' dropdown with value '" + state + "'");
         userCheckOutPage.selectItemInDropdownAtBillingInfoTab("State/Province", state);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 15: Input to 'Zip' text box with value '" + zip + "'");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 16: Input to 'Zip' text box with value '" + zip + "'");
         userCheckOutPage.inputToTextboxByTitle("Zip", zip);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 16: Input to 'Telephone' text box with value '" + telephone + "'");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 17: Input to 'Telephone' text box with value '" + telephone + "'");
         userCheckOutPage.inputToTextboxByTitle("Telephone", telephone);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 17: Click to 'Continue' button at 'Billing Information' tab");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 18: Click to 'Continue' button at 'Billing Information' tab");
         userCheckOutPage.clickToContinueAtBillingInfoTab();
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 18: Click to 'Continue' button at 'Shipping Method' tab");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 19: Click to 'Continue' button at 'Shipping Method' tab");
         userCheckOutPage.clickToContinueAtShippingMethodTab();
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 19: Click to 'Check/ Money order' radio at 'Payment Information' tab");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 20: Click to 'Check/ Money order' radio at 'Payment Information' tab");
         userCheckOutPage.checkToRadioPaymentInfoByRadioTitle("Check / Money order");
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 20: Click to 'Continue' button at 'Payment Information' tab");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 21: Click to 'Continue' button at 'Payment Information' tab");
         userCheckOutPage.clickToContinueAtPaymentInfoTab();
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 21: Click to 'Place Order' button");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 22: Click to 'Place Order' button");
         userSuccessCheckOutPage = userCheckOutPage.clickToPlaceOrderButton();
 
 
-        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 22: Verify the successfully purchase product message is displayed");
+        ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 23: Verify the successfully purchase product message is displayed");
         verifyTrue(userSuccessCheckOutPage.isSuccessfullPurchaseMessageDisplayed());
     }
 

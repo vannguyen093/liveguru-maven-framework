@@ -8,9 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-
-import java.io.File;
 
 public class LocalFactory {
     private WebDriver driver;
@@ -20,12 +17,11 @@ public class LocalFactory {
         this.browserName = browserName;
     }
 
-    public WebDriver createDriver(){
+    public WebDriver createDriver() {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList) {
             case FIREFOX:
-                //                WebDriverManager.firefoxdriver().setup();
-                System.setProperty("webdriver.gecko.driver", GlobalConstants.PROJECT_PATH + "\\browserDrivers\\geckodriver.exe");
+                WebDriverManager.firefoxdriver().setup();
                 System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "\\browserLogs\\FirefoxLog.log");
                 driver = new FirefoxDriver();
