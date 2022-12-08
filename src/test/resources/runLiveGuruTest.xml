@@ -18,7 +18,7 @@
 <!--            <package name="com.user" />-->
 <!--        </packages>-->
         <classes>
-            <class name="com.user.User_03_Review_Purchase_Search"/>
+            <class name="com.admin.Admin_01_Create_Update_Delete_Account"/>
         </classes>
     </test>
 

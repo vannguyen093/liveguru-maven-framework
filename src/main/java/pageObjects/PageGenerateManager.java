@@ -46,6 +46,12 @@ public class PageGenerateManager {
     public static UserSuccessCheckOutPageObject getUserSuccessCheckOutPage(WebDriver driver){
         return new UserSuccessCheckOutPageObject(driver);
     }
+    public static UserAdvancedSearchPageObject getUserAdvancedSearchPage(WebDriver driver){
+        return new UserAdvancedSearchPageObject(driver);
+    }
+    public static UserSearchResultPageObject getUserSearchResultPage(WebDriver driver){
+        return new UserSearchResultPageObject(driver);
+    }
     public static AdminLoginPageObject getAdminLoginPage(WebDriver driver){
         return new AdminLoginPageObject(driver);
     }

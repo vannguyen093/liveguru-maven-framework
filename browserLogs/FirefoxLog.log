@@ -1,19 +1,20 @@
-1670458295000	geckodriver	INFO	Listening on 127.0.0.1:13905
-1670458295912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofileU915Oi"
-1670458296364	Marionette	INFO	Marionette enabled
-1670458296370	Marionette	INFO	Listening on port 51770
-Read port: 51770
-1670458296751	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofileU915Oi\\search.json.mozlz4", (void 0)))
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 6687 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1670466192848	geckodriver	INFO	Listening on 127.0.0.1:64037
+1670466193663	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofilee81j99"
+1670466193970	Marionette	INFO	Marionette enabled
+1670466193975	Marionette	INFO	Listening on port 62147
+Read port: 62147
+1670466194071	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Van Nguyen\\AppData\\Local\\Temp\\rust_mozprofilee81j99\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 6985 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 7757 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 6457 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 2020 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 3027 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 2083 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 7787 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 780 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 3352 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/A0RlYSVNidyzuuj9s3x_gihat09geBiINDRnkKmgVjk.js line 2 > eval line 1978 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-1670458322791	Marionette	INFO	Stopped listening on port 51770
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 6515 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 7003 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 1805 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 7068 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
+1670466217271	Marionette	INFO	Stopped listening on port 62147

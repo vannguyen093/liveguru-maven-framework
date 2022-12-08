@@ -523,9 +523,9 @@ public class BasePage {
     private long longTimeOut = GlobalConstants.LONG_TIMEOUT;
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
 
-    public void clickToMyAccountLink(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.MY_ACOUNT_LINK);
-        clickToElement(driver, BasePageUI.MY_ACOUNT_LINK);
+    public void clickToFooterMenuLinkByMenuText(WebDriver driver, String footerMenuText) {
+        waitForElementClickable(driver, BasePageUI.FOOTER_MENU_LINK_BY_MENU_TEXT, footerMenuText);
+        clickToElement(driver, BasePageUI.FOOTER_MENU_LINK_BY_MENU_TEXT, footerMenuText);
     }
 
     public void clickToHeaderAccountLink(WebDriver driver){

@@ -14,6 +14,16 @@ import ultilities.Environment;
 import java.lang.reflect.Method;
 
 public class User_01_Register_Login extends BaseTest {
+    private WebDriver driver;
+    private String firstName, lastName, emailAddress, password;
+    DataHelper dataHelper;
+    Environment env;
+    UserHomePageObject userHomePage;
+    UserLoginPageObject userLoginPage;
+    UserRegisterPageObject userRegisterPage;
+    UserMyDashboardPageObject userMyDashboardPage;
+    UserAccountInfoPageObject userAccountInfoPage;
+    AdminHomePageObject adminHomePage;
     @Parameters({"browser", "evnName", "ipAddress", "portNumber", "osName", "osVersion"})
     @BeforeClass
     public void beforeClass(@Optional("firefox") String browserName, @Optional("local") String evnName, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("localhost") String ipAddress, @Optional("4444") String portNumber) {
@@ -26,12 +36,8 @@ public class User_01_Register_Login extends BaseTest {
 
         userHomePage = PageGenerateManager.getUserHomePage(driver);
 
-        adminUserName = "user01";
-        adminPassword = "guru99com";
-
         firstName = dataHelper.getFirstName();
         lastName = dataHelper.getLastName();
-        fullName = firstName + " " + lastName;
         emailAddress = dataHelper.getEmail();
         password = dataHelper.getPassword();
     }
@@ -41,7 +47,7 @@ public class User_01_Register_Login extends BaseTest {
         ExtentTestManager.startTest(method.getName(), "Create Account");
 
         ExtentTestManager.getTest().log(Status.INFO, "Create Account - Step 01: Click to 'My Account' link");
-        userHomePage.clickToMyAccountLink(driver);
+        userHomePage.clickToFooterMenuLinkByMenuText(driver, "My Account");
         userLoginPage = PageGenerateManager.getUserLoginPage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Create Account - Step 02: Click to 'Create An Account' button");
@@ -92,32 +98,7 @@ public class User_01_Register_Login extends BaseTest {
     }
 
     @Test
-    public void TC_03_Verify_Account_At_Admin_Site(Method method) {
-        ExtentTestManager.startTest(method.getName(), "Verify registered account at admin site");
-
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 01: Open admin site");
-        userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_URL);
-        adminLoginPage = PageGenerateManager.getAdminLoginPage(driver);
-
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 02: Input to 'User Name' text box with value '" + adminUserName + "'");
-        adminLoginPage.inputToTextboxById("username", adminUserName);
-
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 03: Input to 'Password' text box with value '" + adminPassword + "'");
-        adminLoginPage.inputToTextboxById("login", adminPassword);
-
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 04: Click to 'Login' button");
-        adminHomePage = adminLoginPage.clickToLoginButton();
-        adminHomePage.closeAdminPopup();
-
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 05: Input full name into Name filter with value '" + fullName + "'");
-        adminHomePage.inputToFilterByFilterName("name", fullName);
-
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 06: Verify the account name is displayed at admin site");
-        verifyTrue(adminHomePage.isRegisteredAccountDisplayed(fullName, emailAddress));
-    }
-
-    @Test
-    public void TC_04_Login_To_System(Method method) {
+    public void TC_03_Login_To_System(Method method) {
         ExtentTestManager.startTest(method.getName(), "Login to system after log out");
 
         ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Open User site");
@@ -125,7 +106,7 @@ public class User_01_Register_Login extends BaseTest {
         userHomePage = PageGenerateManager.getUserHomePage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Click to 'My Account' link");
-        userHomePage.clickToMyAccountLink(driver);
+        userHomePage.clickToFooterMenuLinkByMenuText(driver, "My Account");
         userLoginPage = PageGenerateManager.getUserLoginPage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Input to 'Email Address' text box with registered email: '" + emailAddress + "'");
@@ -147,16 +128,4 @@ public class User_01_Register_Login extends BaseTest {
         closeBrowserAndDriver();
     }
 
-    private WebDriver driver;
-    private String firstName, lastName, fullName, emailAddress, password;
-    private String adminUserName, adminPassword;
-    DataHelper dataHelper;
-    Environment env;
-    UserHomePageObject userHomePage;
-    UserLoginPageObject userLoginPage;
-    UserRegisterPageObject userRegisterPage;
-    UserMyDashboardPageObject userMyDashboardPage;
-    UserAccountInfoPageObject userAccountInfoPage;
-    AdminLoginPageObject adminLoginPage;
-    AdminHomePageObject adminHomePage;
 }

@@ -13,6 +13,24 @@ import ultilities.Environment;
 import java.lang.reflect.Method;
 
 public class User_03_Review_Purchase_Search extends BaseTest {
+    private WebDriver driver;
+    Environment env;
+    DataHelper dataHelper;
+    private String firstName, lastName, emailAddress, password;
+    private String address, country, state, city, zip, telephone;
+    private String yourThoughtText, yourReviewText;
+    UserHomePageObject userHomePage;
+    UserProductDetailPageObject userProductDetailPage;
+    UserCartPageObject userCartPage;
+    UserLoginPageObject userLoginPage;
+    UserRegisterPageObject userRegisterPage;
+    UserMyDashboardPageObject userMyDashboardPage;
+    UserTVPageObject userTVPage;
+    UserReviewPageObject userReviewPage;
+    UserCheckOutPageObject userCheckOutPage;
+    UserSuccessCheckOutPageObject userSuccessCheckOutPage;
+    UserAdvancedSearchPageObject userAdvancedSearchPage;
+    UserSearchResultPageObject userSearchResultPage;
     @Parameters({"browser", "evnName", "ipAddress", "portNumber", "osName", "osVersion"})
     @BeforeClass
     public void beforeClass(@Optional("firefox") String browserName, @Optional("local") String evnName, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("localhost") String ipAddress, @Optional("4444") String portNumber) {
@@ -39,7 +57,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         yourThoughtText = "This is my review " + generateFakeNumber();
         yourReviewText = "Review " + generateFakeNumber();
 
-        userHomePage.clickToMyAccountLink(driver);
+        userHomePage.clickToFooterMenuLinkByMenuText(driver, "My Account");
         userLoginPage = PageGenerateManager.getUserLoginPage(driver);
 
         userRegisterPage = userLoginPage.clickToCreateAccountButton();
@@ -51,7 +69,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         userMyDashboardPage = userRegisterPage.clickToRegisterButton();
     }
 
-//    @Test
+    @Test
     public void TC_10_Review_Product(Method method) {
         ExtentTestManager.startTest(method.getName(), "Review a product");
 
@@ -97,7 +115,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         ExtentTestManager.startTest(method.getName(), "Purchase Product");
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 01: Click to 'TV' link");
-        userMyDashboardPage.clickToHeaderMenuLinkByMenuText(driver, "TV");
+        userReviewPage.clickToHeaderMenuLinkByMenuText(driver, "TV");
         userTVPage = PageGenerateManager.getUserTVPage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 02: Click to 'Add to cart' button at product named 'Samsung LCD'");
@@ -169,25 +187,43 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         verifyTrue(userSuccessCheckOutPage.isSuccessfullPurchaseMessageDisplayed());
     }
 
+    @Test
+    public void TC_12_Search_Product(Method method) {
+        ExtentTestManager.startTest(method.getName(), "Search Product");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 01: Click to 'Advanced Search' link");
+        userSuccessCheckOutPage.clickToFooterMenuLinkByMenuText(driver, "Advanced Search");
+        userAdvancedSearchPage = PageGenerateManager.getUserAdvancedSearchPage(driver);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 02: Input 'Price' text box with value range: '0 - 150'");
+        userAdvancedSearchPage.inputToSearchSettingTextboxById("price", "0");
+        userAdvancedSearchPage.inputToSearchSettingTextboxById("price_to", "150");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 03: Click to 'Search' button");
+        userSearchResultPage = userAdvancedSearchPage.clickToSearchButton();
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 04: Verify that the search result contains two items");
+        verifyEquals(userSearchResultPage.getSearchResultSize(), 2);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 05: Click to 'Advanced Search' link");
+        userSearchResultPage.clickToFooterMenuLinkByMenuText(driver, "Advanced Search");
+        userAdvancedSearchPage = PageGenerateManager.getUserAdvancedSearchPage(driver);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 06: Input 'Price' text box with value range: '151 - 1000'");
+        userAdvancedSearchPage.inputToSearchSettingTextboxById("price", "151");
+        userAdvancedSearchPage.inputToSearchSettingTextboxById("price_to", "1000");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 07: Click to 'Search' button");
+        userSearchResultPage = userAdvancedSearchPage.clickToSearchButton();
+
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 08: Verify that the search result contains two items");
+        verifyEquals(userSearchResultPage.getSearchResultSize(), 3);
+    }
+
     @AfterClass(alwaysRun = true)
     public void afterClass() {
         closeBrowserAndDriver();
     }
 
-    private WebDriver driver;
-    Environment env;
-    DataHelper dataHelper;
-    private String firstName, lastName, emailAddress, password;
-    private String address, country, state, city, zip, telephone;
-    private String yourThoughtText, yourReviewText;
-    UserHomePageObject userHomePage;
-    UserProductDetailPageObject userProductDetailPage;
-    UserCartPageObject userCartPage;
-    UserLoginPageObject userLoginPage;
-    UserRegisterPageObject userRegisterPage;
-    UserMyDashboardPageObject userMyDashboardPage;
-    UserTVPageObject userTVPage;
-    UserReviewPageObject userReviewPage;
-    UserCheckOutPageObject userCheckOutPage;
-    UserSuccessCheckOutPageObject userSuccessCheckOutPage;
+
 }

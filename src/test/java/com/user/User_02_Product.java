@@ -13,6 +13,21 @@ import ultilities.Environment;
 import java.lang.reflect.Method;
 
 public class User_02_Product extends BaseTest {
+    private WebDriver driver;
+    Environment env;
+    DataHelper dataHelper;
+    private String firstName, lastName, emailAddress, password;
+    private String sonyPriceAtList, sonyPriceAtDetail;
+    UserHomePageObject userHomePage;
+    UserMobilePageObject userMobilePage;
+    UserProductDetailPageObject userProductDetailPage;
+    UserCartPageObject userCartPage;
+    UserCompareWindowPageObject userCompareWindowPage;
+    UserLoginPageObject userLoginPage;
+    UserRegisterPageObject userRegisterPage;
+    UserMyDashboardPageObject userMyDashboardPage;
+    UserTVPageObject userTVPage;
+    UserWishlistPageObject userWishlistPage;
     @Parameters({"browser", "evnName", "ipAddress", "portNumber", "osName", "osVersion"})
     @BeforeClass
     public void beforeClass(@Optional("firefox") String browserName, @Optional("local") String evnName, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("localhost") String ipAddress, @Optional("4444") String portNumber) {
@@ -30,7 +45,7 @@ public class User_02_Product extends BaseTest {
         emailAddress = dataHelper.getEmail();
         password = dataHelper.getPassword();
 
-        userHomePage.clickToMyAccountLink(driver);
+        userHomePage.clickToFooterMenuLinkByMenuText(driver, "My Account");
         userLoginPage = PageGenerateManager.getUserLoginPage(driver);
 
         userRegisterPage = userLoginPage.clickToCreateAccountButton();
@@ -188,19 +203,5 @@ public class User_02_Product extends BaseTest {
         closeBrowserAndDriver();
     }
 
-    private WebDriver driver;
-    Environment env;
-    DataHelper dataHelper;
-    private String firstName, lastName, emailAddress, password;
-    private String sonyPriceAtList, sonyPriceAtDetail;
-    UserHomePageObject userHomePage;
-    UserMobilePageObject userMobilePage;
-    UserProductDetailPageObject userProductDetailPage;
-    UserCartPageObject userCartPage;
-    UserCompareWindowPageObject userCompareWindowPage;
-    UserLoginPageObject userLoginPage;
-    UserRegisterPageObject userRegisterPage;
-    UserMyDashboardPageObject userMyDashboardPage;
-    UserTVPageObject userTVPage;
-    UserWishlistPageObject userWishlistPage;
+
 }
