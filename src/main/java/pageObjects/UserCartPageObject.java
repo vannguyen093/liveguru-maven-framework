@@ -46,7 +46,7 @@ public class UserCartPageObject extends BasePage {
         sendkeysToElement(driver, UserCartPageUI.QUANTITY_TEXTBOX, value);
     }
 
-    public void clickToButtonByButtonTitle(String buttonTitle) {
+    public void clickToButtonAtAdminSiteByButtonTitle(String buttonTitle) {
         waitForElementClickable(driver, UserCartPageUI.BUTTON_BY_TITLE_TEXT, buttonTitle);
         clickToElement(driver, UserCartPageUI.BUTTON_BY_TITLE_TEXT, buttonTitle);
     }

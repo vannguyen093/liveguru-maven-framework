@@ -58,4 +58,10 @@ public class PageGenerateManager {
     public static AdminHomePageObject getAdminHomePage(WebDriver driver){
         return new AdminHomePageObject(driver);
     }
+    public static AdminOrderPageObject getAdminOrderPage(WebDriver driver){
+        return new AdminOrderPageObject(driver);
+    }
+    public static AdminDownloadedInvoiceTabPageObject getDownloadedInvoiceTabPage(WebDriver driver){
+        return new AdminDownloadedInvoiceTabPageObject(driver);
+    }
 }

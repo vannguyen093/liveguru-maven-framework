@@ -131,7 +131,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         userCartPage.inputToZipTextBox(zip);
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 06: Click to 'Estimate' link");
-        userCartPage.clickToButtonByButtonTitle("Estimate");
+        userCartPage.clickToButtonAtAdminSiteByButtonTitle("Estimate");
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 07: Verify 'Flat Rate' is displayed with value 'Fixed - $5.00'");
         verifyEquals(userCartPage.getFixedFlatRateText(),"$5.00");
@@ -140,7 +140,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         userCartPage.checkToFixedRadio();
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 09: Click to 'Update Total' button");
-        userCartPage.clickToButtonByButtonTitle("Update Total");
+        userCartPage.clickToButtonAtAdminSiteByButtonTitle("Update Total");
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 10: Verify 'Shipping & Handling' is displayed");
         verifyEquals(userCartPage.getShippingHandlingText(),"$5.00");
@@ -149,7 +149,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         verifyEquals(userCartPage.getGrandTotalText(),"$705.00");
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 12: Click to 'Proceed To Checkout' button");
-        userCartPage.clickToButtonByButtonTitle("Proceed to Checkout");
+        userCartPage.clickToButtonAtAdminSiteByButtonTitle("Proceed to Checkout");
         userCheckOutPage = PageGenerateManager.getUserCheckOutPage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Purchase Product - Step 13: Input to 'Address' text box with value '" + address + "'");

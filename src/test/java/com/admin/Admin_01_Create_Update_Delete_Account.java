@@ -156,10 +156,39 @@ public class Admin_01_Create_Update_Delete_Account extends BaseTest{
         ExtentTestManager.getTest().log(Status.INFO, "Verify Updated At Admin Site - Step 02: Input '" + editFullName + "' in the 'Name' filter to search");
         adminHomePage.inputToFilterByFilterName("name", editFullName);
 
-        ExtentTestManager.getTest().log(Status.INFO, "Verify At Admin Site - Step 03: Verify the updated account name is displayed at admin site");
+        ExtentTestManager.getTest().log(Status.INFO, "Verify Updated At Admin Site - Step 03: Verify the updated account name is displayed at admin site");
         verifyTrue(adminHomePage.isRegisteredAccountDisplayed(editFullName, editEmailAddress));
     }
 
+    @Test
+    public void TC_05_Delete_Account_At_Admin_Site(Method method) {
+        ExtentTestManager.startTest(method.getName(), "Delete an account at admin site");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 01: Open admin site");
+        adminHomePage.openPageUrl(driver, GlobalConstants.ADMIN_URL);
+        adminHomePage = PageGenerateManager.getAdminHomePage(driver);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 02: Select '" + fullName + "' by checkbox");
+        adminHomePage.selectAccountCheckboxByAccountFullName(fullName);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 03: Select 'Delete' in 'Actions' dropdown");
+        adminHomePage.selectItemAtCustomerActionDropdownByName(driver,"Delete");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 04: Click to 'Submit' button");
+        adminHomePage.clickToButtonAtAdminSiteByButtonTitle(driver,"Submit");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 05: Accept alert");
+        adminHomePage.acceptAlert(driver);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 06: Verify that the account successfully deleted message is displayed");
+        verifyTrue(adminHomePage.isMessageAtAdminSiteDisplayed(driver));
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 07: Input '" + fullName + "' in the 'Name' filter to search");
+        adminHomePage.inputToFilterByFilterName("name", fullName);
+
+        ExtentTestManager.getTest().log(Status.INFO, "Delete Account At Admin Site - Step 08: Verify '" + fullName +"' is undisplayed at admin site");
+        verifyTrue(adminHomePage.isDeleteAccountUndisplayed(fullName, emailAddress));
+    }
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {

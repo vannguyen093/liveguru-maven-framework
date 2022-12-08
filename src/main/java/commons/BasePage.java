@@ -367,6 +367,11 @@ public class BasePage {
         action.moveToElement(getWebElement(driver, locatorType)).perform();
     }
 
+    public void hoverMouseToElement(WebDriver driver, String locatorType, String... dynamicValues) {
+        Actions action = new Actions(driver);
+        action.moveToElement(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues))).perform();
+    }
+
     public void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
         Actions action = new Actions(driver);
         action.sendKeys(getWebElement(driver, locatorType), key).perform();
@@ -491,6 +496,15 @@ public class BasePage {
         overrideGlobalTimeout(driver, longTimeOut);
     }
 
+    /*
+     * Wait for element undisplayed in DOM or not in DOM by dynamic locator and override implicit timeout*/
+    public void waitForElementUndisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
+        WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeOut);
+        overrideGlobalTimeout(driver, shortTimeOut);
+        explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
+        overrideGlobalTimeout(driver, longTimeOut);
+    }
+
     public void waitForAllElementInvisible(WebDriver driver, String locatorType) {
         WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
         explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElements(driver, locatorType)));
@@ -547,5 +561,26 @@ public class BasePage {
     public void clickToHeaderMenuLinkByMenuText(WebDriver driver, String headerMenuText) {
         waitForElementClickable(driver, BasePageUI.HEADER_MENU_LINK_BY_MENU_TEXT, headerMenuText);
         clickToElement(driver, BasePageUI.HEADER_MENU_LINK_BY_MENU_TEXT, headerMenuText);
+    }
+
+    public void clickToButtonAtAdminSiteByButtonTitle(WebDriver driver, String buttonTitle) {
+        waitForElementClickable(driver, BasePageUI.BUTTON_AT_ADMIN_SITE_BY_BUTTON_TITLE, buttonTitle);
+        clickToElement(driver, BasePageUI.BUTTON_AT_ADMIN_SITE_BY_BUTTON_TITLE, buttonTitle);
+    }
+
+    public boolean isMessageAtAdminSiteDisplayed(WebDriver driver) {
+        waitForElementVisible(driver, BasePageUI.SUCCESS_DELETE_MESSAGE_AT_ADMIN_SITE_TEXT);
+        return isElementDisplayed(driver, BasePageUI.SUCCESS_DELETE_MESSAGE_AT_ADMIN_SITE_TEXT);
+    }
+
+    public void hoverToAdminMenuByMenuText(WebDriver driver, String menuText){
+        waitForElementClickable(driver, BasePageUI.ADMIN_MENU_LINK_BY_MENU_TEXT, menuText);
+        hoverMouseToElement(driver, BasePageUI.ADMIN_MENU_LINK_BY_MENU_TEXT, menuText);
+    }
+
+    public void clickToSubMenuBySubMenuText(WebDriver driver, String menuText, String subMenuText) {
+        hoverToAdminMenuByMenuText(driver, menuText);
+        waitForElementClickable(driver, BasePageUI.SUB_ADMIN_MENU_LINK_BY_MENU_TEXT, subMenuText);
+        clickToElement(driver, BasePageUI.SUB_ADMIN_MENU_LINK_BY_MENU_TEXT, subMenuText);
     }
 }
