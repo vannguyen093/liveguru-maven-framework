@@ -36,7 +36,7 @@ public class Admin_03_Sort_Pagination extends BaseTest{
 
     }
 
-//    @Test
+    @Test
     public void TC_08_Sort(Method method) {
         ExtentTestManager.startTest(method.getName(), "Verify sort is working correctly");
 
