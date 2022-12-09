@@ -91,7 +91,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         verifyTrue(userReviewPage.isErrorMessageByLabelTextDisplayed("Let us know your thoughts"));
         verifyTrue(userReviewPage.isErrorMessageByLabelTextDisplayed("Summary of Your Review"));
 
-        ExtentTestManager.getTest().log(Status.INFO, "Review Product - Step 06: Verify error messages are displayed");
+        ExtentTestManager.getTest().log(Status.INFO, "Review Product - Step 06: Select product rate star");
         userReviewPage.selectRatingStarRadioByNumber("3");
 
         ExtentTestManager.getTest().log(Status.INFO, "Review Product - Step 07: Input to 'Thought' text box with value '" + yourThoughtText + "'");

@@ -27,4 +27,16 @@ public class AdminOrderPageObject extends BasePage {
         waitForElementClickable(driver, AdminOrderPageUI.FIRST_ORDER_CHECKBOX);
         checkToDefaultCheckboxRadio(driver, AdminOrderPageUI.FIRST_ORDER_CHECKBOX);
     }
+
+    public void selectItemAtViewDropdown(String itemText) {
+        waitForElementInvisible(driver, BasePageUI.LOADING_MASK);
+        waitForElementClickable(driver, AdminOrderPageUI.ORDER_VIEW_DROPDOWN);
+        selectItemInDefaultDropdown(driver, AdminOrderPageUI.ORDER_VIEW_DROPDOWN, itemText);
+        sleepInSecond(1);
+    }
+
+    public int getOrderTableSize() {
+        waitForElementVisible(driver, AdminOrderPageUI.ORDER_TABLE);
+        return getElementSize(driver, AdminOrderPageUI.ORDER_TABLE);
+    }
 }

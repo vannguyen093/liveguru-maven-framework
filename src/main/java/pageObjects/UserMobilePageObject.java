@@ -3,6 +3,7 @@ package pageObjects;
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.UserMobilePageUI;
+import pageUIs.UserTVPageUI;
 
 public class UserMobilePageObject extends BasePage {
     WebDriver driver;
@@ -44,5 +45,11 @@ public class UserMobilePageObject extends BasePage {
 
         switchToWindowByTitle(driver, getPageTitle(driver));
         return PageGenerateManager.getUserCompareWindowPage(driver);
+    }
+
+    public UserProductDetailPageObject clickToProductTitleByProductName(String productName) {
+        waitForElementClickable(driver, UserMobilePageUI.PRODUCT_NAME_TITLE, productName);
+        clickToElement(driver, UserMobilePageUI.PRODUCT_NAME_TITLE, productName);
+        return PageGenerateManager.getUserProductDetailPage(driver);
     }
 }

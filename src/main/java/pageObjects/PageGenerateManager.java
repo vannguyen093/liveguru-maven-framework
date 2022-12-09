@@ -1,7 +1,6 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
-import pageUIs.AdminHomePageUI;
 
 public class PageGenerateManager {
     public static UserHomePageObject getUserHomePage(WebDriver driver){
@@ -61,7 +60,16 @@ public class PageGenerateManager {
     public static AdminOrderPageObject getAdminOrderPage(WebDriver driver){
         return new AdminOrderPageObject(driver);
     }
-    public static AdminDownloadedInvoiceTabPageObject getDownloadedInvoiceTabPage(WebDriver driver){
-        return new AdminDownloadedInvoiceTabPageObject(driver);
+    public static AdminDownloadedOrderTabPageObject getAdminDownloadedOrderTabPage(WebDriver driver){
+        return new AdminDownloadedOrderTabPageObject(driver);
+    }
+    public static AdminPendingReviewPageObject getAdminPendingReviewPage(WebDriver driver){
+        return new AdminPendingReviewPageObject(driver);
+    }
+    public static AdminEditPendingReviewPageObject getAdminEditPendingReviewPage(WebDriver driver){
+        return new AdminEditPendingReviewPageObject(driver);
+    }
+    public static AdminInvoicePageObject getAdminInvoicePage(WebDriver driver){
+        return new AdminInvoicePageObject(driver);
     }
 }

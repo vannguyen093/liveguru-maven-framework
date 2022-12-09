@@ -2,6 +2,7 @@ package pageObjects;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageUIs.UserMobilePageUI;
 import pageUIs.UserProductDetailPageUI;
 
 public class UserProductDetailPageObject extends BasePage {
@@ -20,5 +21,15 @@ public class UserProductDetailPageObject extends BasePage {
         waitForElementClickable(driver, UserProductDetailPageUI.ADD_REVIEW_LINK);
         clickToElement(driver, UserProductDetailPageUI.ADD_REVIEW_LINK);
         return PageGenerateManager.getUserReviewPage(driver);
+    }
+
+    public void clickToProductDetaiTabByTabTitle(String productDetailTabTitle) {
+        waitForElementClickable(driver, UserProductDetailPageUI.PRODUCT_DETAIL_TAB_BY_TAB_TITLE_TEXT, productDetailTabTitle);
+        clickToElement(driver, UserProductDetailPageUI.PRODUCT_DETAIL_TAB_BY_TAB_TITLE_TEXT, productDetailTabTitle);
+    }
+
+    public boolean isEditPendingReviewDisplayed(String reviewText) {
+        waitForElementVisible(driver, UserProductDetailPageUI.MY_PENDING_REVIEW_TEXT, reviewText);
+        return isElementDisplayed(driver, UserProductDetailPageUI.MY_PENDING_REVIEW_TEXT, reviewText);
     }
 }

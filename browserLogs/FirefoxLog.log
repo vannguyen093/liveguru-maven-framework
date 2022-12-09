@@ -1,12 +1,31 @@
-1670493547106	geckodriver	INFO	Listening on 127.0.0.1:36985
-1670493548184	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofile27kNxs"
-1670493548939	Marionette	INFO	Marionette enabled
-1670493548946	Marionette	INFO	Listening on port 58713
-Read port: 58713
-1670493549348	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofile27kNxs\\search.json.mozlz4", (void 0)))
+1670555795240	geckodriver	INFO	Listening on 127.0.0.1:9834
+1670555796854	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofilehEkl1k"
+1670555797836	Marionette	INFO	Marionette enabled
+1670555797845	Marionette	INFO	Listening on port 53927
+Read port: 53927
+1670555798088	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofilehEkl1k\\search.json.mozlz4", (void 0)))
+JavaScript warning: http://live.techpanda.org/js/varien/product.js, line 485: unreachable code after return statement
+JavaScript warning: http://live.techpanda.org/js/varien/configurable.js, line 291: unreachable code after return statement
+JavaScript error: http://live.techpanda.org/skin/frontend/rwd/default/js/app.js, line 1194: TypeError: image.elevateZoom is not a function
+JavaScript warning: https://pagead2.googlesyndication.com/bg/GC5M5N_VN3lVd7ErmxmldCKoshgV9d2S74rLP9hyoZw.js line 2 > eval line 6391 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
+JavaScript warning: http://live.techpanda.org/js/varien/product.js, line 485: unreachable code after return statement
+JavaScript warning: http://live.techpanda.org/js/varien/configurable.js, line 291: unreachable code after return statement
+JavaScript error: http://live.techpanda.org/skin/frontend/rwd/default/js/app.js, line 1194: TypeError: image.elevateZoom is not a function
+JavaScript warning: https://pagead2.googlesyndication.com/bg/GC5M5N_VN3lVd7ErmxmldCKoshgV9d2S74rLP9hyoZw.js line 2 > eval line 5287 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://live.techpanda.org."
 JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
-1670493572825	Marionette	INFO	Stopped listening on port 58713
+JavaScript warning: http://live.techpanda.org/js/calendar/calendar.js, line 138: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/GC5M5N_VN3lVd7ErmxmldCKoshgV9d2S74rLP9hyoZw.js line 2 > eval line 6191 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Parent 15968, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:746
+JavaScript warning: https://pagead2.googlesyndication.com/bg/GC5M5N_VN3lVd7ErmxmldCKoshgV9d2S74rLP9hyoZw.js line 2 > eval line 4519 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: http://live.techpanda.org/js/varien/product.js, line 485: unreachable code after return statement
+JavaScript warning: http://live.techpanda.org/js/varien/configurable.js, line 291: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/GC5M5N_VN3lVd7ErmxmldCKoshgV9d2S74rLP9hyoZw.js line 2 > eval line 7138 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1670555833302	Marionette	INFO	Stopped listening on port 53927

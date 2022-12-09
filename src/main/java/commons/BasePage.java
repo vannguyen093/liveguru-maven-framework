@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.AdminLoginPageObject;
+import pageObjects.PageGenerateManager;
 import pageUIs.BasePageUI;
 
 import java.util.List;
@@ -151,6 +153,10 @@ public class BasePage {
 
     public List<WebElement> getListWebElements(WebDriver driver, String locatorType) {
         return driver.findElements(getByLocator(locatorType));
+    }
+
+    public List<WebElement> getListWebElements(WebDriver driver, String locatorType, String... dynamicValues) {
+        return driver.findElements(getByLocator(getDynamicXpath(locatorType, dynamicValues)));
     }
 
     public void clickToElement(WebDriver driver, String locatorType) {
@@ -401,6 +407,11 @@ public class BasePage {
         jsExecutor.executeScript("arguments[0].click();", getWebElement(driver, locatorType));
     }
 
+    public void clickToElementByJS(WebDriver driver, String locatorType, String... dynamicValues) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
+    }
+
     public void scrollToElementByJS(WebDriver driver, String locatorType) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getWebElement(driver, locatorType));
@@ -534,6 +545,7 @@ public class BasePage {
         fullFileName = fullFileName.trim();
         getWebElement(driver, GlobalConstants.UPLOAD_FILE).sendKeys(fullFileName);
     }
+
     private long longTimeOut = GlobalConstants.LONG_TIMEOUT;
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
 
@@ -542,7 +554,7 @@ public class BasePage {
         clickToElement(driver, BasePageUI.FOOTER_MENU_LINK_BY_MENU_TEXT, footerMenuText);
     }
 
-    public void clickToHeaderAccountLink(WebDriver driver){
+    public void clickToHeaderAccountLink(WebDriver driver) {
         waitForElementClickable(driver, BasePageUI.HEADER_ACOUNT_LINK);
         clickToElement(driver, BasePageUI.HEADER_ACOUNT_LINK);
     }
@@ -573,14 +585,35 @@ public class BasePage {
         return isElementDisplayed(driver, BasePageUI.SUCCESS_DELETE_MESSAGE_AT_ADMIN_SITE_TEXT);
     }
 
-    public void hoverToAdminMenuByMenuText(WebDriver driver, String menuText){
-        waitForElementClickable(driver, BasePageUI.ADMIN_MENU_LINK_BY_MENU_TEXT, menuText);
-        hoverMouseToElement(driver, BasePageUI.ADMIN_MENU_LINK_BY_MENU_TEXT, menuText);
+    public void hoverToMenuLevel0ByMenuText(WebDriver driver, String level0MenuText){
+        waitForElementClickable(driver, BasePageUI.ADMIN_MENU_LEVEL_0_LINK_BY_MENU_TEXT, level0MenuText);
+        hoverMouseToElement(driver, BasePageUI.ADMIN_MENU_LEVEL_0_LINK_BY_MENU_TEXT, level0MenuText);
     }
 
-    public void clickToSubMenuBySubMenuText(WebDriver driver, String menuText, String subMenuText) {
-        hoverToAdminMenuByMenuText(driver, menuText);
-        waitForElementClickable(driver, BasePageUI.SUB_ADMIN_MENU_LINK_BY_MENU_TEXT, subMenuText);
-        clickToElement(driver, BasePageUI.SUB_ADMIN_MENU_LINK_BY_MENU_TEXT, subMenuText);
+    public void clickToSubMenuLevel1BySubMenuText(WebDriver driver, String level0MenuText, String level1MenuText) {
+        hoverToMenuLevel0ByMenuText(driver, level0MenuText);
+
+        waitForElementClickable(driver, BasePageUI.SUB_ADMIN_MENU_LEVEL_1_LINK_BY_MENU_TEXT, level0MenuText, level1MenuText);
+        clickToElement(driver, BasePageUI.SUB_ADMIN_MENU_LEVEL_1_LINK_BY_MENU_TEXT, level0MenuText, level1MenuText);
+    }
+
+    public void clickToSubMenuLevel2BySubMenuText(WebDriver driver, String level0MenuText, String level1MenuText, String level2MenuText) {
+        clickToSubMenuLevel1BySubMenuText(driver, level0MenuText, level1MenuText);
+
+        waitForElementClickable(driver, BasePageUI.SUB_ADMIN_MENU_LEVEL_2_LINK_BY_MENU_TEXT, level0MenuText, level2MenuText);
+        clickToElement(driver, BasePageUI.SUB_ADMIN_MENU_LEVEL_2_LINK_BY_MENU_TEXT, level0MenuText, level2MenuText);
+    }
+
+    public void clickToSubMenuLevel3BySubMenuText(WebDriver driver, String level0MenuText, String level1MenuText, String level2MenuText, String level3MenuText) {
+        clickToSubMenuLevel2BySubMenuText(driver, level0MenuText, level1MenuText, level2MenuText);
+
+        waitForElementClickable(driver, BasePageUI.SUB_ADMIN_MENU_LEVEL_3_LINK_BY_MENU_TEXT, level0MenuText, level3MenuText);
+        clickToElementByJS(driver, BasePageUI.SUB_ADMIN_MENU_LEVEL_3_LINK_BY_MENU_TEXT, level0MenuText, level3MenuText);
+    }
+
+    public AdminLoginPageObject clickToLogoutLinkAtAdminSite(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
+        clickToElement(driver, BasePageUI.LOGOUT_LINK);
+        return PageGenerateManager.getAdminLoginPage(driver);
     }
 }
