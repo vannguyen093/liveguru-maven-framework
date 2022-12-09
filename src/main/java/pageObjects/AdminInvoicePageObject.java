@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import pageUIs.AdminInvoicePageUI;
 import pageUIs.BasePageUI;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -137,6 +138,25 @@ public class AdminInvoicePageObject extends BasePage {
 
         Collections.sort(invoiceSortedList);
         Collections.reverse(invoiceSortedList);
+
+        return invoiceSortedList.equals(invoiceUIList);
+    }
+
+
+    public boolean isDateSortedByAsc(String tabName, String indexNumber) {
+        List<String> invoiceUIList = new ArrayList<String>();
+
+        List<WebElement> invoiceRowText = getListWebElements(driver, AdminInvoicePageUI.ROW_TEXT_BY_TAB_NAME_AND_INDEX, tabName, indexNumber);
+        for (WebElement invoiceText : invoiceRowText) {
+            invoiceUIList.add(invoiceText.getText().substring(0,5));
+        }
+
+        ArrayList<String> invoiceSortedList = new ArrayList<String>();
+        for (String invoice : invoiceUIList) {
+            invoiceSortedList.add(invoice);
+        }
+
+        Collections.sort(invoiceSortedList);
 
         return invoiceSortedList.equals(invoiceUIList);
     }

@@ -66,12 +66,12 @@ public class Admin_03_Sort_Pagination extends BaseTest{
         ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 08: Verify the 'Invoice #' organized invoices in descending order");
         verifyTrue(adminInvoicePage.isInvoiceSortedByDesc("increment_id", "2"));
 
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 09: Click the 'Invoice Date' to arrange invoices in ascending order");
-//        adminInvoicePage.clickToSortInvoiceTabByName("created_at");
-//
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 10: Verify the 'Invoice Date' organized invoices in ascending order");
-//        verifyTrue(adminInvoicePage.isInvoiceSortedByAsc("created_at","3"));
-//
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 09: Click the 'Invoice Date' to arrange invoices in ascending order");
+        adminInvoicePage.clickToSortInvoiceTabByName("created_at");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 10: Verify the 'Invoice Date' organized invoices in ascending order");
+        verifyTrue(adminInvoicePage.isDateSortedByAsc("created_at","3"));
+
 //        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 11: Click the 'Invoice Date' to arrange invoices in descending order");
 //        adminInvoicePage.clickToSortInvoiceTabByName("created_at");
 //
@@ -131,7 +131,7 @@ public class Admin_03_Sort_Pagination extends BaseTest{
 
     }
 
-    @Test
+//    @Test
     public void TC_09_Pagination(Method method) {
         ExtentTestManager.startTest(method.getName(), "Verify pagination functionality");
 
