@@ -70,13 +70,13 @@ public class Admin_03_Sort_Pagination extends BaseTest{
         adminInvoicePage.clickToSortInvoiceTabByName("created_at");
 
         ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 10: Verify the 'Invoice Date' organized invoices in ascending order");
-        verifyTrue(adminInvoicePage.isDateSortedByAsc("created_at","3"));
+        verifyTrue(adminInvoicePage.isInvoiceSortedByAsc("created_at","3"));
 
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 11: Click the 'Invoice Date' to arrange invoices in descending order");
-//        adminInvoicePage.clickToSortInvoiceTabByName("created_at");
-//
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 12: Verify the 'Invoice Date' organized invoices in descending order");
-//        verifyTrue(adminInvoicePage.isInvoiceSortedByDesc("created_at","3"));
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 11: Click the 'Invoice Date' to arrange invoices in descending order");
+        adminInvoicePage.clickToSortInvoiceTabByName("created_at");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 12: Verify the 'Invoice Date' organized invoices in descending order");
+        verifyTrue(adminInvoicePage.isInvoiceSortedByDesc("created_at","3"));
 
         ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 13: Click the 'Order #' to arrange invoices in ascending order");
         adminInvoicePage.clickToSortInvoiceTabByName("order_increment_id");
@@ -90,17 +90,17 @@ public class Admin_03_Sort_Pagination extends BaseTest{
         ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 16: Verify the 'Order #' organized invoices in descending order");
         verifyTrue(adminInvoicePage.isInvoiceSortedByDesc("order_increment_id","4"));
 
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 17: Click the 'Order Date' to arrange invoices in ascending order");
-//        adminInvoicePage.clickToSortInvoiceTabByName("order_created_at");
-//
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 18: Verify the 'Order Date' organized invoices in ascending order");
-//        verifyTrue(adminInvoicePage.isInvoiceSortedByAsc("order_created_at","5"));
-//
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 19: Click the 'Order Date' to arrange invoices in descending order");
-//        adminInvoicePage.clickToSortInvoiceTabByName("order_created_at");
-//
-//        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 20: Verify the 'Order Date' organized invoices in descending order");
-//        verifyTrue(adminInvoicePage.isInvoiceSortedByDesc("order_created_at","5"));
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 17: Click the 'Order Date' to arrange invoices in ascending order");
+        adminInvoicePage.clickToSortInvoiceTabByName("order_created_at");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 18: Verify the 'Order Date' organized invoices in ascending order");
+        verifyTrue(adminInvoicePage.isInvoiceSortedByAsc("order_created_at","5"));
+
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 19: Click the 'Order Date' to arrange invoices in descending order");
+        adminInvoicePage.clickToSortInvoiceTabByName("order_created_at");
+
+        ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 20: Verify the 'Order Date' organized invoices in descending order");
+        verifyTrue(adminInvoicePage.isInvoiceSortedByDesc("order_created_at","5"));
 
         ExtentTestManager.getTest().log(Status.INFO, "Sort - Step 21: Click the 'Bill to Name' to arrange invoices in ascending order");
         adminInvoicePage.clickToSortInvoiceTabByName("billing_name");

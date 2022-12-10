@@ -39,4 +39,25 @@ public class AdminOrderPageObject extends BasePage {
         waitForElementVisible(driver, AdminOrderPageUI.ORDER_TABLE);
         return getElementSize(driver, AdminOrderPageUI.ORDER_TABLE);
     }
+
+    public void clickToSelectUnSelectLinkByText(String selectLinkText) {
+        waitForElementClickable(driver, AdminOrderPageUI.ORDER_SELECT_UNSELECT_LINK_BY_TEXT, selectLinkText);
+        clickToElement(driver, AdminOrderPageUI.ORDER_SELECT_UNSELECT_LINK_BY_TEXT, selectLinkText);
+        sleepInSecond(1);
+    }
+
+    public boolean getItemsSelectedText(String numberItemsSelectedText) {
+        waitForElementVisible(driver, AdminOrderPageUI.NUMBER_ITEMS_SELECTED_TEXT, numberItemsSelectedText);
+        return isElementDisplayed(driver, AdminOrderPageUI.NUMBER_ITEMS_SELECTED_TEXT, numberItemsSelectedText);
+    }
+
+    public int getTableSelectedCheckboxSize() {
+        waitForElementVisible(driver, AdminOrderPageUI.TABLE_SELECTED_CHECKBOX);
+        return getElementSize(driver, AdminOrderPageUI.TABLE_SELECTED_CHECKBOX);
+    }
+
+    public int getTableUnselectedCheckboxSize() {
+        waitForElementVisible(driver, AdminOrderPageUI.TABLE_UNSELECTED_CHECKBOX);
+        return getElementSize(driver, AdminOrderPageUI.TABLE_UNSELECTED_CHECKBOX);
+    }
 }

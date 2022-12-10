@@ -22,6 +22,7 @@ public class AdminHomePageObject extends BasePage {
         waitForElementVisible(driver, AdminHomePageUI.FILTER_TEXTBOX_BY_FILTER_NAME, filterName);
         sendkeysToElement(driver, AdminHomePageUI.FILTER_TEXTBOX_BY_FILTER_NAME, value, filterName);
         pressKeyToElement(driver, AdminHomePageUI.FILTER_TEXTBOX_BY_FILTER_NAME, Keys.ENTER, filterName);
+        sleepInSecond(1);
     }
 
     public boolean isRegisteredAccountDisplayed(String fullNameText, String emailAddressText) {

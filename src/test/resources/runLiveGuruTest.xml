@@ -18,7 +18,7 @@
 <!--            <package name="com.user" />-->
 <!--        </packages>-->
         <classes>
-            <class name="com.admin.Admin_03_Sort_Pagination"/>
+            <class name="com.admin.Admin_04_Search_Select_Checkbox"/>
         </classes>
     </test>
 
