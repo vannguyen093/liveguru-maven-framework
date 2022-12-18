@@ -39,11 +39,11 @@ public class UserMobilePageObject extends BasePage {
         return getElementText(driver, UserMobilePageUI.PRODUCT_ADDED_COMPARE_MESSAGE_TEXT);
     }
 
-    public UserCompareWindowPageObject clickToCompareButton() {
+    public UserCompareWindowPageObject clickToCompareButton(String windowTitle) {
         waitForElementClickable(driver, UserMobilePageUI.COMPARE_BUTTON);
         clickToElement(driver, UserMobilePageUI.COMPARE_BUTTON);
 
-        switchToWindowByTitle(driver, getPageTitle(driver));
+        switchToWindowByTitle(driver, windowTitle);
         return PageGenerateManager.getUserCompareWindowPage(driver);
     }
 

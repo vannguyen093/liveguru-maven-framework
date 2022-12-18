@@ -216,7 +216,7 @@ public class User_03_Review_Purchase_Search extends BaseTest {
         ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 07: Click to 'Search' button");
         userSearchResultPage = userAdvancedSearchPage.clickToSearchButton();
 
-        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 08: Verify that the search result contains two items");
+        ExtentTestManager.getTest().log(Status.INFO, "Search Product - Step 08: Verify that the search result contains three items");
         verifyEquals(userSearchResultPage.getSearchResultSize(), 3);
     }
 

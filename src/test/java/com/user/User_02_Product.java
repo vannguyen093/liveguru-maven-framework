@@ -17,7 +17,7 @@ public class User_02_Product extends BaseTest {
     Environment env;
     DataHelper dataHelper;
     private String firstName, lastName, emailAddress, password;
-    private String sonyPriceAtList, sonyPriceAtDetail;
+    private String sonyPriceAtList, sonyPriceAtDetail, parentID;
     UserHomePageObject userHomePage;
     UserMobilePageObject userMobilePage;
     UserProductDetailPageObject userProductDetailPage;
@@ -147,6 +147,7 @@ public class User_02_Product extends BaseTest {
         userMobilePage = PageGenerateManager.getUserMobilePage(driver);
 
         ExtentTestManager.getTest().log(Status.INFO, "Compare - Step 02: Click to 'Add To Compare' link of 'Sony Xperia'");
+        parentID = userMobilePage.getPageID(driver);
         userMobilePage.clickToAddToCompareLinkByProdName("Sony Xperia");
 
         ExtentTestManager.getTest().log(Status.INFO, "Compare - Step 03: Verify 'Sony Xperia' has been added to comparison list");
@@ -159,7 +160,7 @@ public class User_02_Product extends BaseTest {
         verifyEquals(userMobilePage.getProductAddedCompareMessage(), "The product IPhone has been added to comparison list.");
 
         ExtentTestManager.getTest().log(Status.INFO, "Compare - Step 06: Click to 'Compare' button");
-        userCompareWindowPage = userMobilePage.clickToCompareButton();
+        userCompareWindowPage = userMobilePage.clickToCompareButton("Products Comparison List - Magento Commerce");
 
         ExtentTestManager.getTest().log(Status.INFO, "Compare - Step 07: Verify the pop-up window with header 'Compare Products' is displayed");
         verifyTrue(userCompareWindowPage.isCompareWindowHeaderDisplayed());
@@ -177,7 +178,7 @@ public class User_02_Product extends BaseTest {
         verifyTrue(userCompareWindowPage.isProductSKUDisplayed("MOB0002"));
 
         ExtentTestManager.getTest().log(Status.INFO, "Compare - Step 10: Close the popup window");
-        userMobilePage = userCompareWindowPage.closeCompareWindow();
+        userMobilePage = userCompareWindowPage.closeCompareWindow(parentID);
     }
 
     @Test

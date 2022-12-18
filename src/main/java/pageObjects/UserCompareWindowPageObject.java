@@ -36,8 +36,8 @@ public class UserCompareWindowPageObject extends BasePage {
         return isElementDisplayed(driver, UserCompareWindowPageUI.PRODUCT_SKU_TEXT, skuText);
     }
 
-    public UserMobilePageObject closeCompareWindow() {
-        closeAllWindowsWithoutParent(driver, getPageID(driver));
+    public UserMobilePageObject closeCompareWindow(String parentID) {
+        closeAllWindowsWithoutParent(driver, parentID);
         return PageGenerateManager.getUserMobilePage(driver);
     }
 }
